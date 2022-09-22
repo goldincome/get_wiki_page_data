@@ -11,6 +11,7 @@ class MediaWikiService
     private array $content;
     private string $apiUrl;
     private array $sectionData;
+    
 
     public function __construct(HttpClientInterface $client)
     {
@@ -29,11 +30,8 @@ class MediaWikiService
         );
         
         $content = $response->getContent();
-        //dd($content);
-        // $content = '{"id":521583, "name":"symfony-docs", ...}'
         $content = $response->toArray();
-        // $content = ['id' => 521583, 'name' => 'symfony-docs', ...]
-
+     
         return $this->content = $content;
     }
 
@@ -60,11 +58,8 @@ class MediaWikiService
          
         );
         
-        $content = $response->getContent();
-        //dd($content);
-        // $content = '{"id":521583, "name":"symfony-docs", ...}'
+        $content = $response->getContent();  
         $content = $response->toArray();
-        // $content = ['id' => 521583, 'name' => 'symfony-docs', ...]
         return $this->sectionData = $content;
     }
 
