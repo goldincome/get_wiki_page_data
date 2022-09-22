@@ -1,5 +1,5 @@
 # get_wiki_page_data
-For Getting WikiSource Featured Text and Its Sections and then combine them into one HTML file.
+For Getting WikiSource Featured Text and Its Sections and then combine them into one HTML file using Symfony
 
 ## Installation
 
